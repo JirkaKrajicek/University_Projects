@@ -1,0 +1,149 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@section Styles
+{
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/register_template.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </environment>
+    <environment exclude="Development">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="~/css/register_template.min.css">
+    </environment>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    Website CSS style
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">-->
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row main" style="margin-top: 10px">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Eshop Sign Up</h1>
+                    <hr />
+                </div>
+            </div>
+
+            @{ViewBag.Action = "Register"; }
+
+            @{ if (String.IsNullOrWhiteSpace(ViewBag.Action) == false)
+                {
+                    <div class="main-login main-center">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data" asp-action="@ViewBag.Action" >
+
+                            <div class="form-group">
+                                <label for="firstname" class="cols-sm-2 control-label">First Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">                                       
+                                        <input asp-for="@Model.Firstname" class="form-control" placeholder="Enter your First Name" />
+                                        <span asp-validation-for="@Model.Firstname" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastname" class="cols-sm-2 control-label">Last Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <!--<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>-->
+                                        <input asp-for="@Model.Lastname" class="form-control" placeholder="Enter your Last Name" />
+                                        <span asp-validation-for="@Model.Lastname" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        
+                                        <input asp-for="@Model.Email" type="email" class="form-control" placeholder="Enter your Email" />
+                                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="username" class="cols-sm-2 control-label">Username</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        
+                                        <input asp-for="@Model.Username" class="form-control" placeholder="Enter your Username" />
+                                        <span asp-validation-for="@Model.Username" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phonenumber" class="cols-sm-2 control-label">Phone Number</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                       
+                                        <input asp-for="@Model.PhoneNumber" type="number" class="form-control" placeholder="Enter your Phone Number" />
+                                        <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="cols-sm-2 control-label">Password</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        
+                                        <input asp-for="@Model.Password" class="form-control" placeholder="Enter your Password" />
+                                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        
+                                        <input asp-for="@Model.RepeatedPassword" class="form-control" placeholder="Confirm your Password" />
+                                        <span asp-validation-for="@Model.RepeatedPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                            </div>
+                            <div class="login-register">
+                                <a asp-area="Security" asp-controller="Account" asp-action="Login">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    }
+                }
+                </div>
+    </div>
+
+    <!--<script type="text/javascript" src="assets/js/bootstrap.js"></script>-->
+</body>
+</html>
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->

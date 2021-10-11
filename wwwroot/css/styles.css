@@ -1,0 +1,50 @@
+﻿.sameHeightCarousel {
+    max-height: 360px;
+    min-width: 1140px;
+}
+
+.rating {
+    display: flex;
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.rating input {
+    display: none
+}
+
+.rating label {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    background: white;
+}
+
+.rating label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    color: #101010;
+    top: 0;
+}
+
+.rating label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    color: #FFC107;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after {
+    opacity: 1;
+}

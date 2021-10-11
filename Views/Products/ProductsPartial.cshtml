@@ -1,0 +1,54 @@
+﻿@using eshop.Models;
+@model dynamic
+
+<div class="row">
+
+
+    <!-- /.col-lg-3 -->
+
+    <div class="">
+        <div class="row">
+            <div class="">
+
+                <h1 class="my-4 text-center">Products</h1>
+              
+
+            </div>
+        </div>
+        <div class="row">
+
+            @{
+                if (Model != null && Model.Products != null && Model.Products.Count > 0)
+                {
+
+                    @foreach (var productItem in Model.Products)
+                    {
+            <div class="col-lg-4 col-md-6 mb-4" style="height: 500px">
+                <div class="card h-100">
+                    <a asp-area="user" asp-controller="Products" asp-action="Detail" asp-route-id="@productItem.ID"><img class="card-img-top img-responsive" src="@productItem.ImageSrc" alt="@productItem.ImageAlt"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <b>@productItem.ProductName</b>
+                        </h4>
+                        <h5>@productItem.Price Kč</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                    </div>
+                    <!--<div class="card-footer">
+        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    </div>-->
+                </div>
+                <input type="button" class="btn-success" value="Buy" style="font-size:1.4em;text-align:center"
+                       onclick="Buy(@productItem.ID, '@Url.Action("AddOrderItemsToSession", "CustomerOrderNotCart", new { Area = "User" })', '#total_price', '@System.Globalization.CultureInfo.CurrentCulture.Name')" />
+            </div>
+                    }
+                }
+            }
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+</div>
+<!-- /.row -->

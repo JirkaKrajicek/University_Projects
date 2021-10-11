@@ -1,0 +1,48 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Products";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Products CRUD page.</p>
+<br />
+<a asp-action="Create">Create Product Item</a>
+<br />
+<br />
+
+@{
+    if (Model != null && Model.Products != null && Model.Products.Count > 0)
+    {
+        <table style="width:100%">
+            <tr>
+                <th class="col-sm-1">@Html.DisplayNameFor(mod => mod.Products[0].ID)</th>
+                <th class="col-sm-2">@Html.DisplayNameFor(mod => mod.Products[0].ProductName)</th>
+                <th class="col-sm-3">@Html.DisplayNameFor(mod => mod.Products[0].ImageAlt)</th>
+                <th class="col-sm-4">@Html.DisplayNameFor(mod => mod.Products[0].ImageSrc)</th>
+                <th class="col-sm-4">@Html.DisplayNameFor(mod => mod.Products[0].Price)</th>
+                <th class="col-sm-5">@Html.DisplayNameFor(mod => mod.Products[0].Description)</th>
+            </tr>
+            @foreach (var productItem in Model.Products)
+            {
+
+                <tr>
+                    <td class="col-sm-1">@productItem.ID</td>
+                    <td class="col-sm-2">@productItem.ProductName</td>
+                    <td class="col-sm-3">@productItem.ImageAlt</td>
+                    <td class="col-sm-4">@productItem.ImageSrc</td>
+                    <td class="col-sm-4">@productItem.Price</td>
+                    <td class="col-sm-5">@productItem.Description</td>
+                    <td class="col-sm-1"><a asp-action="Edit" asp-route-id="@productItem.ID">Edit</a></td>
+                    <td class="col-sm-1"><a asp-action="Delete" asp-route-id="@productItem.ID" onclick="return ConfirmDelete();">Delete</a></td>
+
+                </tr>
+            }
+        </table>
+    }
+}
+
+@section Scripts
+{
+    <script src="~/js/Scripts.js"></script>
+}

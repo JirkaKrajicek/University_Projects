@@ -1,0 +1,17 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Edit Product Item";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>This page edits product item, wow!</p>
+
+@{ ViewBag.Action = "Edit";}
+<partial name="EditForm" model="Model">
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script src="~/js/Validation/FileContentTypeValidation.js"></script>
+    }

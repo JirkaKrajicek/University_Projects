@@ -1,0 +1,100 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Log In";
+}
+
+@section Styles
+{
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/register_template.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </environment>
+    <environment exclude="Development">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="~/css/register_template.min.css">
+    </environment>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row main" style="margin-top: 10px">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Eshop Log In</h1>
+                    <hr />
+                </div>
+            </div>
+
+            @{ViewBag.Action = "Login";}
+
+            @{ if (String.IsNullOrWhiteSpace(ViewBag.Action) == false)
+                {
+                    <div class="main-login main-center">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data" asp-action="@ViewBag.Action">
+
+                            <div class="form-group">
+                                <label for="firstname" class="cols-sm-2 control-label">Username</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <input asp-for="@Model.Username" id="userUsername" class="form-control" placeholder="Enter your Username" />
+                                        <span asp-validation-for="@Model.Username" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastname" class="cols-sm-2 control-label">Password</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <!--<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>-->
+                                        <input asp-for="@Model.Password" id="userPassword" class="form-control" placeholder="Enter your Password" />
+                                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input id="rememberMeCHB" type="checkbox" asp-for="@Model.RememberMe" /> Remember Me
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="loginButton">Login</button>
+                            </div>
+                            <div class="login-register">
+                                <a asp-area="Security" asp-controller="Account" asp-action="Register">Register</a>
+                            </div>
+                        </form>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <!--<script type="text/javascript" src="assets/js/bootstrap.js"></script>-->
+</body>
+</html>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<script>
+$(document).ready(function(){console.log(localStorage);const e=document.getElementById("userUsername"),o=document.getElementById("userPassword");localStorage.length>0&&(console.log(localStorage.getItem("username")),console.log(localStorage.getItem("password")),e.value=localStorage.getItem("username"),o.value=localStorage.getItem("password"))});
+</script>
+
+<script type="text/javascript">
+document.getElementById("loginButton").onclick=function(){const e=document.getElementById("userUsername"),o=document.getElementById("userPassword"),l=document.getElementById("rememberMeCHB");console.log(e.value),console.log(o.value),l.checked?(localStorage.clear(),localStorage.setItem("username",e.value),localStorage.setItem("password",o.value)):(console.log("nothing to remember..."),localStorage.clear())};
+</script>
+
+

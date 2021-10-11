@@ -1,0 +1,153 @@
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.deps.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.dev.json
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.dll
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.Views.dll
+C:\Users\krist\source\repos\eshop\bin\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.csprojAssemblyReference.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfoInputs.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfo.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.csproj.CoreCompileInputs.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.input.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.output.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.RazorCoreGenerate.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cs
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.dll
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.genruntimeconfig.cache
+C:\Users\krist\source\repos\eshop\obj\Debug\netcoreapp2.1\eshop.csproj.CopyComplete
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.deps.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.dev.json
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.dll
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.Views.dll
+C:\Users\student\Documents\krajicek\eshop\bin\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.csprojAssemblyReference.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfoInputs.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfo.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.input.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.output.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.RazorCoreGenerate.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.dll
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.genruntimeconfig.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.csproj.CopyComplete
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\eshop.csproj.CoreCompileInputs.cache
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\Carousel.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\student\Documents\krajicek\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.deps.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.runtimeconfig.dev.json
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.dll
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.Views.dll
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\bin\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.csprojAssemblyReference.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.RazorAssemblyInfo.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfoInputs.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.AssemblyInfo.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.input.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.TagHelpers.output.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.RazorCoreGenerate.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\Carousel.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cache
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.RazorTargetAssemblyInfo.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.Views.pdb
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.dll
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.pdb
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\eshop.csproj.CopyComplete
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\Create.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Carousel\EditForm.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Products\Create.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Products\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Products\EditForm.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Products\Products.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\user\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\user\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\user\Views\Products\Products.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Orders\Create.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Orders\Delete.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Orders\Details.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Orders\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Orders\Index.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\OrderItems\Create.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\OrderItems\Delete.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\OrderItems\Details.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\OrderItems\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\OrderItems\Index.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Products\ProductsPartial.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\Account\Login.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\Account\Register.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ErrorCodeStatus.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\View404.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\user\Views\Products\Detail.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Views\Shared\View505.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\Account\Accounts.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\Security\Views\Account\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Rating\Index.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Rating\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Rating\Details.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Users\Create.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Users\Delete.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Users\Details.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Users\Edit.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\admin\Views\Users\Index.cshtml.g.cs
+C:\Users\Jiří Krajíček\OneDrive\UTB\5.semestr\PWT\eshop\obj\Debug\netcoreapp2.1\Razor\Areas\user\Views\CustomerOrders\Index.cshtml.g.cs

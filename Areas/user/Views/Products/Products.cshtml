@@ -1,0 +1,37 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Products";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+@{
+    if (Model != null && Model.Products != null && Model.Products.Count > 0)
+    {
+        <div>
+            <div style="width:100%">
+                @foreach (var productItem in Model.Products)
+                {
+                    <div style="display:flex; flex-direction:row">
+                        <div style="width:50%">
+                            <a asp-area="user" asp-controller="Products" asp-action="Detail" asp-route-id="@productItem.ID"><img style="" src="@productItem.ImageSrc" alt="@productItem.ImageAlt" class="img-responsive" /></a>
+                        </div>
+
+                        <div style="width:50%; display:flex; flex-direction:column; padding-left:50px">
+                            <h3><b>Name:</b></h3>
+                            <p class="col-md-5">@productItem.ProductName</p>
+                            <br />
+                            <h3><b>Price:</b></h3>
+                            <p class="col-md-5">@productItem.Price Kč</p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                }
+            </div>
+        </div>
+
+    }
+}
