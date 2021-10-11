@@ -1,0 +1,820 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38385,        810]
+NotebookOptionsPosition[     37050,        777]
+NotebookOutlinePosition[     37391,        792]
+CellTagsIndexPosition[     37348,        789]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["\[CapitalUAcute]kol \[CHacek].5",
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.5019607843137255, 0., 0.]]], "Title",
+ CellChangeTimes->{{3.7823675947847366`*^9, 3.782367635403701*^9}, 
+   3.7823677480185986`*^9, 3.7823678567452145`*^9, {3.7837802347563148`*^9, 
+   3.7837802352864676`*^9}, {3.7846324944725375`*^9, 3.784632495294982*^9}, {
+   3.7847314354522104`*^9, 
+   3.784731435790286*^9}},ExpressionUUID->"58260262-a679-458c-a880-\
+3375c48c41fe"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Ji\[RHacek]\[IAcute] Kraj\[IAcute]\[CHacek]ek\n",
+  FontFamily->"Source Sans Pro Semibold",
+  FontWeight->"SemiBold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["Frakt\[AAcute]ln\[IAcute] geometrie", "Subtitle",
+  FontSize->28,
+  FontWeight->"Bold",
+  FontColor->RGBColor[0., 0., 0.5019607843137255]]
+}], "Subtitle",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7823676547304025`*^9, 3.7823676726666794`*^9}, {
+  3.782367871775387*^9, 3.78236787874369*^9}, {3.7837802383465223`*^9, 
+  3.783780257117116*^9}, {3.7846324881637735`*^9, 3.7846325080487742`*^9}, {
+  3.784731463641368*^9, 
+  3.784731468864719*^9}},ExpressionUUID->"f75a8a31-a6fc-499e-8129-\
+5d602ffaab64"],
+
+Cell[TextData[{
+ StyleBox["Sestavit funkci v prost\[RHacek]ed\[IAcute] Mathematica pro \
+vykreslen\[IAcute] frakt\[AAcute]lu dle zadan\[YAcute]ch pravidel (metoda IFS \
+- Iterated function system).\nP\[RHacek]idat u\[ZHacek]ivatelsk\[EAcute] \
+grafick\[EAcute] rozhran\[IAcute], kter\[EAcute] bude obsahovat:\n\tNastavit \
+po\[CHacek]et generovan\[YAcute]ch bod\[URing].\n\tNa\[CHacek]\[IAcute]st p\
+\[RHacek]ednastaven\[EAcute] pravidla (alespo\[NHacek] 3).\n\tMo\[ZHacek]nost \
+jednotliv\[EAcute] pravidla upravovat (p\[RHacek]id\[AAcute]vat \[RHacek]\
+\[AAcute]dky pravidel, m\[EHacek]nit hodnoty koeficient\[URing], a \
+m\[EHacek]nit barvu pravidla)\nV\[YAcute]sledn\[YAcute] report bude, jako \
+obvykle, obsahovat slovn\[IAcute] z\[AAcute]v\[EHacek]r.\n\n",
+  FontFamily->"Calibri",
+  FontSize->16],
+ StyleBox["       \[LineSeparator]", "Subitem",
+  FontFamily->"Calibri",
+  FontSize->16]
+}], "Item",
+ CellDingbat->"\[FilledSquare]",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.782367980691338*^9, 3.7823680035022707`*^9}, {
+   3.7823681139131155`*^9, 3.782368153295451*^9}, {3.782368354676926*^9, 
+   3.7823684010955048`*^9}, {3.7823684332963448`*^9, 
+   3.7823684668771935`*^9}, {3.782369083159309*^9, 3.782369083159309*^9}, 
+   3.7827988551291847`*^9, {3.7837805026884336`*^9, 3.7837805295608196`*^9}, {
+   3.7837805786095114`*^9, 3.783780592083552*^9}, {3.7837806340108275`*^9, 
+   3.783780690260422*^9}, {3.7846324881637735`*^9, 3.7846325167857842`*^9}, {
+   3.784731478197129*^9, 
+   3.7847314948726845`*^9}},ExpressionUUID->"bb6287b9-b1c2-4f70-94fe-\
+d4b7cb270294"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Zdrojov\[EAcute] k\[OAcute]dy",
+ FontWeight->"Bold",
+ FontColor->RGBColor[0., 0., 0.5019607843137255]]], "Section",
+ CellChangeTimes->{{3.7823681899335213`*^9, 
+  3.7823682065260444`*^9}},ExpressionUUID->"a5e6e59d-0c37-4daa-81c4-\
+f66738e05c48"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", "  ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"draw", "[", 
+      RowBox[{"p", ",", "q"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<Frakt\[AAcute]ly\>\"", ",", "20", ",", "Bold"}], "]"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "q", ",", " ", "200", ",", "\"\<Po\[CHacek]et bod\[URing]\>\""}], 
+        "}"}], ",", "0", ",", "5000", ",", " ", "1"}], "}"}], ",", " ", 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"p", ",", " ", "kapradina"}], "}"}], ",", " ", 
+       RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     "\"\<\!\(\*SubscriptBox[\(x\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(ax\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(by\), \(n\)]\)+e\>\"", ",", 
+     "\[IndentingNewLine]", 
+     "\"\<\!\(\*SubscriptBox[\(y\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(cx\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(dy\), \(n\)]\)+f\>\"", ",", 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"p", ",", " ", "kapradina", ",", " ", "\"\<Pravidlo\>\""}], 
+        "}"}], ",", " ", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"kapradina", "\[Rule]", " ", "\"\<Kapradina\>\""}], ",", " ", 
+         RowBox[{"javorovyList", "\[Rule]", "\"\<Javor\>\""}], ",", " ", 
+         RowBox[{"kochCurve", "\[Rule]", " ", "\"\<Koch Curve\>\""}], ",", 
+         RowBox[{"vlastni", "\[Rule]", "\"\<Vlastni\>\""}]}], "}"}]}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "rows", ",", "4", ",", 
+         "\"\<Po\[CHacek]et \[RHacek]\[AAcute]dk\[URing]\>\""}], "}"}], ",", 
+       "1", ",", "10", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+      RowBox[{"Outer", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"InputField", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", 
+            RowBox[{"p", "[", 
+             RowBox[{"[", 
+              RowBox[{"#1", ",", "#2"}], "]"}], "]"}], "]"}], ",", " ", 
+           RowBox[{"ImageSize", "\[Rule]", "45"}]}], "\[IndentingNewLine]", 
+          "]"}], "&"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"Range", "[", "rows", "]"}], ",", 
+        RowBox[{"Range", "[", 
+         RowBox[{"Length", "@", 
+          RowBox[{"First", "@", "p"}]}], "]"}]}], "]"}], 
+      "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ContinuousAction", "\[Rule]", " ", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SynchronousUpdating", "\[Rule]", "False"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "\[IndentingNewLine]", 
+    "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"draw", "[", 
+     RowBox[{"pravidlo_", ",", "maxBodu_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "v", ",", "x", ",", "y", ",", "i", ",", "p", ",", "color", ",", "x1", 
+        ",", "y1"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"v", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], "=", 
+        RowBox[{"RandomReal", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "1"}], "}"}], ",", "2"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "\[LessEqual]", "maxBodu"}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"p", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"pravidlo", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", 
+                RowBox[{"-", "2"}]}], "]"}], "]"}], "\[Rule]", " ", 
+             "pravidlo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"color", " ", "=", " ", 
+           RowBox[{"p", "[", 
+            RowBox[{"[", 
+             RowBox[{"-", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"p", "=", 
+           RowBox[{"p", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ";;", "6"}], "]"}], "]"}]}], ";", "  ", 
+          "\[IndentingNewLine]", 
+          RowBox[{"x1", "=", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"p", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "*", "x"}], "+", 
+            RowBox[{
+             RowBox[{"p", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "*", "y"}], "+", 
+            RowBox[{"p", "[", 
+             RowBox[{"[", "5", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"y1", "=", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"p", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], "*", "x"}], "+", 
+            RowBox[{
+             RowBox[{"p", "[", 
+              RowBox[{"[", "4", "]"}], "]"}], "*", "y"}], "+", 
+            RowBox[{"p", "[", 
+             RowBox[{"[", "6", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"v", ",", 
+            RowBox[{"{", 
+             RowBox[{"color", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"x1", ",", "y1"}], "}"}], "]"}]}], "}"}]}], "]"}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}], "=", 
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "y1"}], "}"}]}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Graphics", "@", "v"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"kapradina", "=", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0.00", ",", "0.00", ",", "0.00", ",", "0.16", ",", "0.00", ",", 
+         "0.00", ",", "0.01", ",", "Brown"}], "}"}], ",", " ", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.850", ",", "0.04", ",", 
+         RowBox[{"-", "0.04"}], ",", "0.85", ",", "0.00", ",", "1.60", ",", 
+         "0.85", ",", "Green"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.20", ",", 
+         RowBox[{"-", "0.26"}], ",", "0.23", ",", "0.22", ",", "0.00", ",", 
+         "1.60", ",", "0.07", ",", "Orange"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "0.15"}], ",", "0.28", ",", "0.26", ",", "0.24", ",", 
+         "0.00", ",", "0.44", ",", "0.07", ",", "Purple"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"javorovyList", " ", "=", " ", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.14", ",", "0.01", ",", "0.00", ",", "0.51", ",", 
+         RowBox[{"-", "0.08"}], ",", 
+         RowBox[{"-", "1.31"}], ",", "0.10", ",", "Brown"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.43", ",", "0.52", ",", 
+         RowBox[{"-", "0.45"}], ",", "0.50", ",", "1.49", ",", 
+         RowBox[{"-", "0.75"}], ",", "0.35", ",", "Green"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.45", ",", 
+         RowBox[{"-", "0.49"}], ",", "0.47", ",", "0.47", ",", 
+         RowBox[{"-", "1.62"}], ",", 
+         RowBox[{"-", "0.74"}], ",", "0.35", ",", "Orange"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.49", ",", "0.00", ",", "0.00", ",", "0.51", ",", "0.02", ",", 
+         "1.62", ",", "0.20", ",", "Purple"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"kochCurve", " ", "=", " ", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0.3333", ",", "0.0000", ",", "0.0000", ",", "0.3333", ",", "0.0000", 
+         ",", "0.0000", ",", "0.25", ",", "Brown"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.1667", ",", 
+         RowBox[{"-", "0.2887"}], ",", "0.2887", ",", "0.1667", ",", "0.3333",
+          ",", "0.0000", ",", "0.25", ",", "Green"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0.1667", ",", "0.2887", ",", 
+         RowBox[{"-", "0.2887"}], ",", "0.1667", ",", "0.5000", ",", "0.2887",
+          ",", "0.25", ",", "Orange"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.333", ",", "0.0000", ",", "0.0000", ",", "0.3333", ",", "0.6667", 
+         ",", "0.0000", ",", "0.25", ",", "Purple"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"vlastni", "=", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", 
+         ",", "0.1", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", 
+         ",", "0.2", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", 
+         ",", "0.1", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", ",", "0.5", 
+         ",", "0.2", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", "0.", ",", 
+         "0.", ",", "Red"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7846325587303724`*^9, 3.7846325814551105`*^9}, {
+   3.7846326224354663`*^9, 3.7846326257231903`*^9}, {3.784633219388305*^9, 
+   3.7846332364482417`*^9}, {3.784731533354576*^9, 3.7847315539548883`*^9}, 
+   3.784732248183488*^9, {3.785059350857409*^9, 3.785059372052461*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"25195c70-7ca4-41ec-94d5-c5953c46de96"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["U\[ZHacek]ivatelsk\[EAcute] rozhran\[IAcute]",
+ FontWeight->"Bold",
+ FontColor->RGBColor[0., 0., 0.5019607843137255]]], "Section",
+ CellChangeTimes->{{3.7827942226066465`*^9, 3.782794258057265*^9}, {
+  3.7846326405060062`*^9, 3.784632641539248*^9}, {3.7847316276389246`*^9, 
+  3.784731651442684*^9}},ExpressionUUID->"8cc4aae4-86b4-4686-a05f-\
+6d6941837bbd"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = {{0., 0., 0., 0.16, 0., 0., 0.01, 
+      RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+      RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+      RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+      RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+      RGBColor[1, 0, 0]}}, $CellContext`q$$ = 1415, $CellContext`rows$$ = 4, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["Frakt\[AAcute]ly", 20, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`q$$], 200, "Po\[CHacek]et bod\[URing]"}, 0, 5000, 
+      1}, {{
+       Hold[$CellContext`p$$], {{0., 0., 0., 0.16, 0., 0., 0.01, 
+         RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+         RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+         RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+         RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}}}}, {
+      Hold[
+      "\!\(\*SubscriptBox[\(x\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(ax\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(by\), \(n\)]\)+e"], 
+      Manipulate`Dump`ThisIsNotAControl}, {
+      Hold[
+      "\!\(\*SubscriptBox[\(y\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(cx\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(dy\), \(n\)]\)+f"], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`p$$], {{0., 0., 0., 0.16, 0., 0., 0.01, 
+         RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+         RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+         RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+         RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+         RGBColor[1, 0, 0]}}, "Pravidlo"}, {{{0., 0., 0., 0.16, 0., 0., 0.01, 
+          RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+          RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+          RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+          RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}} -> 
+       "Kapradina", {{0.14, 0.01, 0., 0.51, -0.08, -1.31, 0.1, 
+          RGBColor[0.6, 0.4, 0.2]}, {
+         0.43, 0.52, -0.45, 0.5, 1.49, -0.75, 0.35, 
+          RGBColor[0, 1, 0]}, {0.45, -0.49, 0.47, 0.47, -1.62, -0.74, 0.35, 
+          RGBColor[1, 0.5, 0]}, {0.49, 0., 0., 0.51, 0.02, 1.62, 0.2, 
+          RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}} -> 
+       "Javor", {{0.3333, 0., 0., 0.3333, 0., 0., 0.25, 
+          RGBColor[0.6, 0.4, 0.2]}, {
+         0.1667, -0.2887, 0.2887, 0.1667, 0.3333, 0., 0.25, 
+          RGBColor[0, 1, 0]}, {
+         0.1667, 0.2887, -0.2887, 0.1667, 0.5, 0.2887, 0.25, 
+          RGBColor[1, 0.5, 0]}, {0.333, 0., 0., 0.3333, 0.6667, 0., 0.25, 
+          RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}} -> 
+       "Koch Curve", {{0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.1, 
+          RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 
+          RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.1, 
+          RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+          RGBColor[1, 0, 0]}} -> "Vlastni"}}, {{
+       Hold[$CellContext`rows$$], 4, 
+       "Po\[CHacek]et \[RHacek]\[AAcute]dk\[URing]"}, 1, 10, 1}, {
+      Hold[
+       Dynamic[
+        Outer[InputField[
+          Dynamic[
+           Part[$CellContext`p$$, #, #2]], ImageSize -> 45]& , 
+         Range[$CellContext`rows$$], 
+         Range[
+          Length[
+           First[$CellContext`p$$]]]]]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {218., {213., 219.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`q$72873$$ = 0, $CellContext`p$72874$$ = 
+    False, $CellContext`rows$72875$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`p$$ = {{0., 0., 0., 0.16, 0., 0., 0.01, 
+           RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+           RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+           RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+           RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+           RGBColor[1, 0, 0]}}, $CellContext`q$$ = 200, $CellContext`rows$$ = 
+        4}, "ControllerVariables" :> {
+        Hold[$CellContext`q$$, $CellContext`q$72873$$, 0], 
+        Hold[$CellContext`p$$, $CellContext`p$72874$$, False], 
+        Hold[$CellContext`rows$$, $CellContext`rows$72875$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> $CellContext`draw[$CellContext`p$$, $CellContext`q$$], 
+      "Specifications" :> {
+        Style[
+        "Frakt\[AAcute]ly", 20, 
+         Bold], {{$CellContext`q$$, 200, "Po\[CHacek]et bod\[URing]"}, 0, 
+         5000, 1}, 
+        Delimiter, {{$CellContext`p$$, {{0., 0., 0., 0.16, 0., 0., 0.01, 
+            RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+            RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+            RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+            RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}}}, ControlType -> None}, Delimiter, 
+        "\!\(\*SubscriptBox[\(x\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(ax\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(by\), \(n\)]\)+e", 
+        "\!\(\*SubscriptBox[\(y\), \(n + 1\)]\)=\!\(\*SubscriptBox[\(cx\), \
+\(n\)]\)+\!\(\*SubscriptBox[\(dy\), \(n\)]\)+f", 
+        Delimiter, {{$CellContext`p$$, {{0., 0., 0., 0.16, 0., 0., 0.01, 
+            RGBColor[0.6, 0.4, 0.2]}, {0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+            RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+            RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+            RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+            RGBColor[1, 0, 0]}}, 
+          "Pravidlo"}, {{{0., 0., 0., 0.16, 0., 0., 0.01, 
+             RGBColor[0.6, 0.4, 0.2]}, {
+            0.85, 0.04, -0.04, 0.85, 0., 1.6, 0.85, 
+             RGBColor[0, 1, 0]}, {0.2, -0.26, 0.23, 0.22, 0., 1.6, 0.07, 
+             RGBColor[1, 0.5, 0]}, {-0.15, 0.28, 0.26, 0.24, 0., 0.44, 0.07, 
+             RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}} -> 
+          "Kapradina", {{0.14, 0.01, 0., 0.51, -0.08, -1.31, 0.1, 
+             RGBColor[0.6, 0.4, 0.2]}, {
+            0.43, 0.52, -0.45, 0.5, 1.49, -0.75, 0.35, 
+             RGBColor[0, 1, 0]}, {0.45, -0.49, 0.47, 0.47, -1.62, -0.74, 0.35, 
+             RGBColor[1, 0.5, 0]}, {0.49, 0., 0., 0.51, 0.02, 1.62, 0.2, 
+             RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}} -> 
+          "Javor", {{0.3333, 0., 0., 0.3333, 0., 0., 0.25, 
+             RGBColor[0.6, 0.4, 0.2]}, {
+            0.1667, -0.2887, 0.2887, 0.1667, 0.3333, 0., 0.25, 
+             RGBColor[0, 1, 0]}, {
+            0.1667, 0.2887, -0.2887, 0.1667, 0.5, 0.2887, 0.25, 
+             RGBColor[1, 0.5, 0]}, {0.333, 0., 0., 0.3333, 0.6667, 0., 0.25, 
+             RGBColor[0.5, 0, 0.5]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}} -> 
+          "Koch Curve", {{0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.1, 
+             RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 
+             RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.1, 
+             RGBColor[1, 0, 0]}, {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2, 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}, {0., 0., 0., 0., 0., 0., 0., 
+             RGBColor[1, 0, 0]}} -> "Vlastni"}}, {{$CellContext`rows$$, 4, 
+          "Po\[CHacek]et \[RHacek]\[AAcute]dk\[URing]"}, 1, 10, 1}, 
+        Dynamic[
+         Outer[InputField[
+           Dynamic[
+            Part[$CellContext`p$$, #, #2]], ImageSize -> 45]& , 
+          Range[$CellContext`rows$$], 
+          Range[
+           Length[
+            First[$CellContext`p$$]]]]]}, 
+      "Options" :> {
+       ContinuousAction -> False, SynchronousUpdating -> False, 
+        ControlPlacement -> Left}, "DefaultOptions" :> {}],
+     ImageSizeCache->{724., {245., 251.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`draw[
+         Pattern[$CellContext`pravidlo, 
+          Blank[]], 
+         Pattern[$CellContext`maxBodu, 
+          Blank[]]] := 
+       Module[{$CellContext`v, $CellContext`x, $CellContext`y, \
+$CellContext`i, $CellContext`p, $CellContext`color, $CellContext`x1, \
+$CellContext`y1}, $CellContext`v = {}; {$CellContext`x, $CellContext`y} = 
+          RandomReal[{0, 1}, 2]; 
+         For[$CellContext`i = 1, $CellContext`i <= $CellContext`maxBodu, 
+           
+           Increment[$CellContext`i], $CellContext`p = 
+            RandomChoice[
+             Part[$CellContext`pravidlo, 
+                All, -2] -> $CellContext`pravidlo]; $CellContext`color = 
+            Part[$CellContext`p, -1]; $CellContext`p = Part[$CellContext`p, 
+              Span[1, 6]]; $CellContext`x1 = 
+            Part[$CellContext`p, 1] $CellContext`x + 
+             Part[$CellContext`p, 2] $CellContext`y + 
+             Part[$CellContext`p, 5]; $CellContext`y1 = 
+            Part[$CellContext`p, 3] $CellContext`x + 
+             Part[$CellContext`p, 4] $CellContext`y + Part[$CellContext`p, 6]; 
+           AppendTo[$CellContext`v, {$CellContext`color, 
+              
+              Point[{$CellContext`x1, $CellContext`y1}]}]; {$CellContext`x, \
+$CellContext`y} = {$CellContext`x1, $CellContext`y1}; Null]; 
+         Graphics[$CellContext`v]]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.785059381974637*^9},
+ CellLabel->
+  "Out[144]=",ExpressionUUID->"32856d6c-8748-4965-8789-97ec1c297b77"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Z\[AAcute]v\[EHacek]r",
+ FontWeight->"Bold",
+ FontColor->RGBColor[0., 0., 0.5019607843137255]]], "Section",
+ CellChangeTimes->{{3.7827986420953054`*^9, 
+  3.7827986607034416`*^9}},ExpressionUUID->"72c7180b-92c9-4ecd-bdb1-\
+a8c7266e9dd7"],
+
+Cell["\<\
+\tTento \[UAcute]kol m\[EHacek] tr\[AAcute]pil ze v\[SHacek]ech \
+nejv\[IAcute]ce. Z jin\[YAcute]ch program\[AAcute]torsk\[YAcute]ch jazyk\
+\[URing] jsem zvykl\[YAcute] si jednotliv\[EAcute] prvky u\[ZHacek]ivatelsk\
+\[EAcute]ho rozhran\[IAcute] \[OpenCurlyDoubleQuote]naklikat\
+\[CloseCurlyDoubleQuote], co\[ZHacek] Matematica neumo\[ZHacek]\[NHacek]uje. \
+V\[IAcute]m, co chci sestavit, ale cesta k tomu je mnohem, mnohem komplikovan\
+\[EHacek]j\[SHacek]\[IAcute].
+\tJsem sice r\[AAcute]d, \[ZHacek]e jsem se p\[RHacek]iu\[CHacek]il nov\
+\[YAcute]m funkc\[IAcute]m, ale nervy m\[AAcute]m jen jedny. Jen \
+z\[AAcute]zrakem moje GUI dr\[ZHacek]\[IAcute] pohromad\[EHacek]. Objevit \
+metodu, kterou pot\[RHacek]ebuji, je pro m\[EHacek] slo\[ZHacek]it\[EAcute], \
+i kdy\[ZHacek] datab\[AAcute]ze \[OpenCurlyDoubleQuote]help\
+\[CloseCurlyDoubleQuote] v Matematice je obs\[AAcute]hl\[AAcute], k vlastn\
+\[IAcute] implementaci si \[CHacek]lov\[EHacek]k mus\[AAcute]\[IAcute] p\
+\[RHacek]ij\[IAcute]t svou cestou.
+\tA tak se i stalo, \[ZHacek]e jsem po p\[AAcute]r hodin\[AAcute]ch \
+implementace k\[OAcute]d smazal, nebo\[THacek] jsem se st\[AAcute]le nep\
+\[RHacek]ibli\[ZHacek]oval cht\[EHacek]n\[EAcute]mu v\[YAcute]sledku. Bez \
+pomoci spolu\[ZHacek]\[AAcute]k\[URing] bych, v\[EHacek]\[RHacek]\[IAcute]m \
+tomu, sed\[EHacek]l a\[ZHacek] do Nov\[EAcute]ho roku.
+\tFrakt\[AAcute]ln\[IAcute] geometrie je moc zaj\[IAcute]mav\[AAcute] a o to \
+zaj\[IAcute]mav\[EHacek]j\[SHacek]\[IAcute] je pozorovat zm\[EHacek]ny, kdy\
+\[ZHacek] do p\[RHacek]edpisu zasahujeme.
+\tZ\[AAcute]v\[EHacek]rem bych dodal, \[ZHacek]e m\[EHacek] mrz\[IAcute], \
+\[ZHacek]e m\[EAcute] u\[ZHacek]ivatelsk\[EAcute] rozhran\[IAcute] nevypad\
+\[AAcute] tak hezky, jako v p\[RHacek]edloze na moodlu, ale opravdu jsem se \
+sna\[ZHacek]il! 
+\tJinak p\[RHacek]eji hezk\[EAcute] sv\[AAcute]tky :)\
+\>", "Text",
+ CellChangeTimes->{{3.782798714619853*^9, 3.782798761442665*^9}, {
+   3.7827987954790707`*^9, 3.7827991239488077`*^9}, {3.7828208800830975`*^9, 
+   3.782820884270251*^9}, {3.782820917268014*^9, 3.7828210718036823`*^9}, 
+   3.7837826553952775`*^9, {3.783782744062467*^9, 3.783782946274912*^9}, {
+   3.7837835814983845`*^9, 3.783783643451381*^9}, {3.783783735596384*^9, 
+   3.7837838297111*^9}, {3.784632744792571*^9, 3.7846327477602525`*^9}, {
+   3.784632797223015*^9, 3.784633210423943*^9}, {3.7847316649640484`*^9, 
+   3.7847321149175215`*^9}, {3.784732187523509*^9, 
+   3.784732228905163*^9}},ExpressionUUID->"ceb642f3-a0ee-4fa1-9e37-\
+8e185ed50b51"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{958, 988},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 474, 8, 96, "Title",ExpressionUUID->"58260262-a679-458c-a880-3375c48c41fe"],
+Cell[CellGroupData[{
+Cell[1079, 34, 752, 17, 90, "Subtitle",ExpressionUUID->"f75a8a31-a6fc-499e-8129-5d602ffaab64",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1834, 53, 1610, 28, 70, "Item",ExpressionUUID->"bb6287b9-b1c2-4f70-94fe-d4b7cb270294",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3481, 86, 269, 5, 53, "Section",ExpressionUUID->"a5e6e59d-0c37-4daa-81c4-f66738e05c48"],
+Cell[3753, 93, 15136, 349, 1874, "Input",ExpressionUUID->"25195c70-7ca4-41ec-94d5-c5953c46de96"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18926, 447, 381, 6, 53, "Section",ExpressionUUID->"8cc4aae4-86b4-4686-a05f-6d6941837bbd"],
+Cell[19310, 455, 14875, 267, 515, "Output",ExpressionUUID->"32856d6c-8748-4965-8789-97ec1c297b77"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34222, 727, 261, 5, 53, "Section",ExpressionUUID->"72c7180b-92c9-4ecd-bdb1-a8c7266e9dd7"],
+Cell[34486, 734, 2536, 39, 254, "Text",ExpressionUUID->"ceb642f3-a0ee-4fa1-9e37-8e185ed50b51"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
