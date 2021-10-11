@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.HeadView"
+             Title="INFO">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <StackLayout>
+                <Label Text="DON'T MISS OUR SALES!" FontAttributes="Bold" FontSize="Large" TextColor="#007A3E"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Spring sale:" FontAttributes="Bold" TextColor="#007A3E"/>
+                <Label Text="For 3 or more products 20% sale on each product. For 8 or more products 30% sale on each product. For 12 or more products 40% sale on each product."/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Summer sale:" FontAttributes="Bold" TextColor="#007A3E"/>
+                <Label Text="If you have 5 or more orders, the next one has 10% sale. If you have 10 or more orders, the next one  has 20% sale."/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Autumn sale:" FontAttributes="Bold" TextColor="#007A3E"/>
+                <Label Text="Every single product has it's own sale."/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Winter sale:" FontAttributes="Bold" TextColor="#007A3E"/>
+                <Label Text="For 3 or more products and overall price 100 or more - 10% sale. For 6 or more products and overall price 250 or more - 15% sale. For 9 or more products and overall price 450 or more - 20% sale."/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

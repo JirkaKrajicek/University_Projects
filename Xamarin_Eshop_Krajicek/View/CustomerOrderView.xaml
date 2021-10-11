@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.CustomerOrderView"
+             Title="ORDERS">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" 
+                         VerticalOptions="CenterAndExpand">
+                <Grid>
+                    <Label Text="Order ID" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#4EA3E9"/>
+                    <Label Grid.Column="1"
+                    Text="Price" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#4EA3E9"/>
+                    <Label Grid.Column="2"
+                    Text="State" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#4EA3E9"/>
+                    <Label Grid.Column="3"
+                           Text="Date" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#4EA3E9"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand" 
+                     VerticalOptions="CenterAndExpand">
+                <ListView ItemsSource="{Binding Orders}"
+                    ItemSelected="ListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Label Text="{Binding OrderID}"/>
+                                        <Label Grid.Column="1"
+                                           Text="{Binding Price}"/>
+                                        <Label Grid.Column="2"
+                                       Text="{Binding State}"/>
+                                        <Label Grid.Column="3"
+                                       Text="{Binding Date}"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

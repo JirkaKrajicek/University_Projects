@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.AllProductsView"
+             Title="PRODUCTS">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Product"
+                     Order="Primary"
+                     Priority="1"
+        Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked_1"/>
+
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <ListView ItemsSource="{Binding Products}"
+            ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                    Text="{Binding Name}"
+                     Detail="{Binding Price}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.AdminUpdateOrderView"
+             Title="UPDATE ORDER">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     >
+            <Label Text="Order ID:" BackgroundColor="#E63E3E" FontAttributes="Bold"/>
+            <Label Text="{Binding OrderID}"/>
+
+            <Label Text="Customer ID:" BackgroundColor="#E63E3E" FontAttributes="Bold"/>
+            <Label Text="{Binding CustomerID}"/>
+
+            <Label Text="Price:" BackgroundColor="#E63E3E" FontAttributes="Bold"/>
+            <Label Text="{Binding Price}"/>
+
+            <Label Text="State:" BackgroundColor="#E63E3E" FontAttributes="Bold"/>
+            <Entry Text="{Binding State}"/>
+
+            <Label Text="Date:" BackgroundColor="#E63E3E" FontAttributes="Bold"/>
+            <Label Text="{Binding Date}"/>
+
+            <Button Text="UPDATE ORDER"                    
+                InputTransparent="False"
+                BackgroundColor="#FFFFFF"
+                BorderColor="#FFFFFF"
+            Clicked="Button_Clicked"/>
+
+            <Button Text="SEND ORDER"                    
+                InputTransparent="False"
+                BackgroundColor="#FFFFFF"
+                BorderColor="#FFFFFF"
+            Clicked="Button_Clicked_1"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

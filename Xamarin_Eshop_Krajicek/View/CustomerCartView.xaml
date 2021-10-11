@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.CustomerCartView"
+             Title="CART">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Create order"
+                     Order="Primary"
+                     Priority="1"
+                     Clicked="ToolbarItem_Clicked"/>
+
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked_1"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid>
+                    <Label Text="Name of item" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#28B8FF"/>
+                    <Label Grid.Column="1"
+                    Text="Price for one" 
+                    FontAttributes="Bold" 
+                    BackgroundColor="#28B8FF"/>
+                    <Label Grid.Column="2"
+                    Text="Amount of items" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#28B8FF"/>
+
+                </Grid>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ListView ItemsSource="{Binding items}"
+                      ItemSelected="ListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Label Text="{Binding Name}"/>
+                                        <Label Grid.Column="1"
+                                       Text="{Binding Price}"/>
+                                        <Label Grid.Column="2"
+                                       Text="{Binding Count}"/>
+
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

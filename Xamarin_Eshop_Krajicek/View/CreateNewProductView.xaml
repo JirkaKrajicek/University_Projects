@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.CreateNewProductView"
+             Title="CREATE NEW PRODUCT">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="New product" 
+                   FontAttributes="Bold"
+                   TextColor="#CD2128"/>
+            <Entry Placeholder="Name of product"
+                   Keyboard="Text"
+                   x:Name="textBoxNewProductName"/>
+            <Entry Placeholder="Price"
+                   Keyboard="Text"               
+                   x:Name="textBoxNewProductPrice"/>
+            <Entry Placeholder="Category"
+                   Keyboard="Text"               
+                   x:Name="textBoxNewProductCategory"/>
+            <Entry Placeholder="Description"
+                   Keyboard="Text"               
+                   x:Name="textBoxNewProductDescription"/>
+            <Button Text="Create new product"
+                x:Name="button1"
+                Clicked="button1_Clicked"
+                BorderColor="#FFFFFF"
+                BackgroundColor="#FFFFFF"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

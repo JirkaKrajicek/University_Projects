@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.CustomerLoginPage"
+             Title="CUSTOMER LOG IN">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="WELCOME TO OUR ESHOP"
+               TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+        <Entry Placeholder="Name"
+               Keyboard="Text"
+               x:Name="textBoxName"/>
+        <Entry Placeholder="Password / Address"
+               Keyboard="Text"
+               IsPassword="True"
+               x:Name="textBoxPassword"/>
+        <Button Text="Log In"
+                x:Name="button1"
+                Clicked="button1_Clicked_1" 
+                BorderColor="#FFFFFF"
+                BackgroundColor="#FFFFFF"/>
+        <Button Text="Create new account"
+                x:Name="button2"
+                Clicked="button2_Clicked"
+                Opacity="0.5"
+                InputTransparent="False"
+                BackgroundColor="#FFFFFF"
+                BorderColor="#FFFFFF"/>
+    </StackLayout>
+</ContentPage>

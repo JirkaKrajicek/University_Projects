@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.AdminOrderDetailView"
+             Title="SELECTED ORDER ITEMS">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" HeightRequest="60">
+                <Grid>
+                    <Label Text="PRODUCT ID:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"
+                           Grid.Column="0"/>
+
+                    <Label Text="NAME:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"
+                           Grid.Column="1"/>
+
+                    <Label Text="PRICE FOR ONE:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"
+                           Grid.Column="2"/>
+
+                    <Label Text="AMOUNT:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"
+                           Grid.Column="3"/>
+
+                    <Label Text="OVERALL PRICE:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"
+                           Grid.Column="4"/>
+
+                </Grid>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Fill">
+                <ListView ItemsSource="{Binding Items}">
+                    <!--ItemSelected="ListView_ItemSelected">-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Label Text="{Binding ProductID}"/>
+                                        <Label Text="{Binding Name}"
+                                               Grid.Column="1"/>
+                                        <Label Grid.Column="2"
+                                               Text="{Binding Price}"/>
+                                        <Label Grid.Column="3"
+                                               Text="{Binding Count}"/>
+                                        <Label Grid.Column="4"
+                                               Text="{Binding PriceCount}"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

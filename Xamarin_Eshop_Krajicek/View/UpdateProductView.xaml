@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.UpdateProductView"
+             Title ="UPDATE PRODUCT">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="ID:"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Label Text="{Binding ProductID}"/>
+            <Label Text="NAME:"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Entry Text="{Binding Name}"/>
+            <Label Text="PRICE:"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Entry Text="{Binding Price}"/>
+            <Label Text="SALE IN %"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Entry Text="{Binding Sale}"/>
+            <Label Text="CATEGORY:"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Entry Text="{Binding Category}"/>
+            <Label Text="DESCRIPTION:"
+                   TextColor="#CD2128"
+               FontAttributes="Bold"/>
+            <Entry Text="{Binding Description}"/>
+
+            <Button Text="UPDATE PRODUCT"
+                    Opacity="0.5"
+                InputTransparent="False"
+                BackgroundColor="#FFFFFF"
+                BorderColor="#FFFFFF"
+            Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.RegisterNewCustomerView"
+             Title="New customer">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="NEW CUSTOMER"
+               TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+            <Entry Placeholder="New Name"
+               Keyboard="Text"
+                   x:Name="textBoxName"/>
+            <Entry Placeholder="Address"
+               Keyboard="Text"
+                   x:Name="textBoxAddress"/>
+            <Button Text="Register"
+                x:Name="button1"                
+                BorderColor="#FFFFFF"
+                BackgroundColor="#FFFFFF"
+                    Clicked="button1_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

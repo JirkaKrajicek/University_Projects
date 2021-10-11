@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.CustomerProductDetailView"
+             Title="SELECTED PRODUCT">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <StackLayout>
+                <Label Text="NAME:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+                <Label Text="{Binding Name}"/>
+                <Label Text="PRICE:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+                <Label Text="{Binding Price}"/>
+                <Label Text="SALE IN %"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+                <Label Text="{Binding Sale}"/>
+                <Label Text="CATEGORY:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+                <Label Text="{Binding Category}"/>
+                <Label Text="DESCRIPTION:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+                <Label Text="{Binding Description}"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="AMOUNT"
+                           TextColor="#1B7DCD"
+                           FontAttributes="Bold"/>
+                <Label x:Name="labelAmount"/>
+                <Stepper VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand"
+                         x:Name="stepper1"
+                         ValueChanged="stepper1_ValueChanged"
+                         Minimum="1"
+                         BackgroundColor="#28B8FF"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Add to card"
+                    InputTransparent="False"
+                    BackgroundColor="#FFFFFF"
+                    BorderColor="#FFFFFF"
+                    Clicked="Button_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

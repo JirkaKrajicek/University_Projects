@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Eshop_Krajicek.View.ItemInCartDetailView"
+             Title="SELECTED ITEM">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out"                     
+        Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+
+            <Label Text="NAME:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+            <Label Text="{Binding Name}"/>
+            <Label Text="PRICE:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+            <Label Text="{Binding Price}"/>
+            <Label Text="AMOUNT"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+            <Label Text="{Binding Count}"/>
+            <Label Text="OVERALL PRICE:"
+                   TextColor="#1B7DCD"
+               FontAttributes="Bold"/>
+            <Label Text="{Binding PriceCount}"/>
+
+
+            <Button Text="REMOVE"                   
+                InputTransparent="False"
+                BackgroundColor="#FFFFFF"
+                BorderColor="#FFFFFF"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
