@@ -1,0 +1,28 @@
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe.config
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.pdb
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csprojAssemblyReference.cache
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Form1.resources
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Properties.Resources.resources
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csproj.GenerateResource.cache
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.exe
+C:\Users\Jiří Krajíček\source\repos\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.pdb
+F:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe.config
+F:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe
+F:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.pdb
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csprojAssemblyReference.cache
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Form1.resources
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Properties.Resources.resources
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csproj.GenerateResource.cache
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csproj.CoreCompileInputs.cache
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.exe
+F:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.pdb
+E:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe.config
+E:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.exe
+E:\school\KRYPTO\DSA_Krajicek_1\bin\Debug\DSA_Krajicek_1.pdb
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csprojAssemblyReference.cache
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Form1.resources
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.Properties.Resources.resources
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.csproj.GenerateResource.cache
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.exe
+E:\school\KRYPTO\DSA_Krajicek_1\obj\Debug\DSA_Krajicek_1.pdb
