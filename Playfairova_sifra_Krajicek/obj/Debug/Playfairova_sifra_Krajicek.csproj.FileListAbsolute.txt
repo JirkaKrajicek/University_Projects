@@ -1,0 +1,10 @@
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\bin\Debug\Playfairova_sifra_Krajicek.exe.config
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\bin\Debug\Playfairova_sifra_Krajicek.exe
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\bin\Debug\Playfairova_sifra_Krajicek.pdb
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.csprojAssemblyReference.cache
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.Form1.resources
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.Properties.Resources.resources
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.csproj.GenerateResource.cache
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.exe
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.pdb
+C:\Users\Jiří Krajíček\source\repos\Playfairova_sifra_Krajicek\obj\Debug\Playfairova_sifra_Krajicek.Table.resources
