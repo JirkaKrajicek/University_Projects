@@ -1,0 +1,28 @@
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe.config
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.pdb
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csprojAssemblyReference.cache
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Form1.resources
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Properties.Resources.resources
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csproj.GenerateResource.cache
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.exe
+C:\Users\Jiří Krajíček\source\repos\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.pdb
+F:\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe.config
+F:\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe
+F:\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.pdb
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csprojAssemblyReference.cache
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Form1.resources
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Properties.Resources.resources
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csproj.GenerateResource.cache
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csproj.CoreCompileInputs.cache
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.exe
+F:\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.pdb
+E:\school\KRYPTO\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe.config
+E:\school\KRYPTO\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.exe
+E:\school\KRYPTO\Kry_Afinni_sifra\bin\Debug\Kry_Afinni_sifra.pdb
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csprojAssemblyReference.cache
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Form1.resources
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.Properties.Resources.resources
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.csproj.GenerateResource.cache
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.exe
+E:\school\KRYPTO\Kry_Afinni_sifra\obj\Debug\Kry_Afinni_sifra.pdb
