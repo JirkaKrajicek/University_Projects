@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Predpoved pocasi</title>
+</head>
+
+<body onload="clocks(); loadWeatherInCity(); loadFavourites()">
+    <div class="wrapper" style="flex-direction: column;">
+
+        <div class="header">
+            <div style="margin: 5px; width: 50%;">
+                <div><b class="logoText">P</b></div>
+                <img class="imageAutoScale" src="images/day_clear.png" alt="sun">
+                <div><b class="logoText">ČASÍ</b></div>
+            </div>
+            <div style="margin: 5px; width: 50%;">
+                <div style="width: 100%; margin: 2px; align-self: center;">
+                    <div style="height: 55px; padding-top: 20px;">
+                        <input id="userInput"
+                            style="border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-color: rgb(21, 97, 211);"
+                            type="text" placeholder="Zjisti počasí ve městě..." size="40">
+                    </div>
+                    <div>
+                        <button id="buttonSearch" class="buttonForSearch">
+                            <div style="font-style: bolt; margin: 5px; color: white; text-align: center;">
+                                Hledej
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div>
+            <nav style="width: 100%;" class="navbar navbar-expand-lg navbar-light bg-light"
+                style="border: 1px solid rgba(219, 219, 219, 0.5); border-radius: 6px;">
+
+                <div style="width: 70%; height: 100% ;padding-left: 25px;">
+                    <select style="height: 70%; margin-top: 10px;" name="favourites" id="favouriteList"
+                        onchange="showSelected()">
+                        <option>Oblíbená města</option>
+                    </select>
+                </div>
+
+                <div style="width: 30%;">
+                    <div class="nav-link" id="timer"></div>
+                </div>
+
+            </nav>
+        </div>
+
+        <br>
+        <div class="bodyStyle">
+            <div class="mainDiv">
+                <div class="outerMainDiv">
+                    <div class="outerMainDivSepar">
+                        <div style="height: 80%;">
+                            <div class="innerMainDiv" style="flex-direction: column;">
+                                <div id="weatherTodayHeader"
+                                    style="width: 100%; height: 35%; font-size: 20px; font-weight: 600; margin-bottom: 5px;">
+                                    Počasí dnes
+                                </div>
+                                <img id="mainImage" class="imageAutoScale" src="" alt="">
+                            </div>
+                            <div class="innerMainDiv" style=" flex-direction: column;">
+                                <p style="padding-top: 100px;" id="tempToday" class="center"></p>
+                                <p id="humToday" style="width: 100%; height: 25%; text-align: center; font-size: 30px;">
+                                </p>
+                            </div>
+                        </div>
+                        <div style="height: 20%;">
+                            <button id="buttonSaveFavourite" class="saveToFavouriteButton">
+                                <div style="font-style: bolt; margin: 5px; color: white; text-align: center;">
+                                    Uložit město do oblíbených
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mainDiv" style="flex-direction: column;">
+                <div class="weeksDiv">
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style="width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxA" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/day_partial_cloud.png"
+                                        alt="partial cloud">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">30 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style="width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxB" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/cloudy.png"
+                                        alt="cloud">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">23 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style="width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxC" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/rain_thunder.png"
+                                        alt="thunder">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">20 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="weeksDiv">
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style=" width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxD" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/day_rain.png"
+                                        alt="rain">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">22 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style=" width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxE" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/day_clear.png"
+                                        alt="sun">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">33 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thirdOfWeeksDiv">
+                        <div style="width: 100%; height: 100%; flex-direction: column;">
+                            <div style="width: 100%; height: 100%; flex-direction: column;">
+                                <div class="innerWeeksDiv1" style="flex-direction: column;">
+                                    <div id="futureBoxF" class="innerWeeksDay"></div>
+                                    <img class=" imageAutoScale" style="width: 75%;" src="images/day_clear.png"
+                                        alt="sun">
+                                </div>
+                                <div class="innerWeeksDiv2" style=" flex-direction: column;">
+                                    <b class="center" style="font-size: 20px; padding-top: 0px;">34 °C</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="" async defer></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+</html>
