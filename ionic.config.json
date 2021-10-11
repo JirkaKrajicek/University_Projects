@@ -1,0 +1,7 @@
+{
+  "name": "IonicObrazky",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

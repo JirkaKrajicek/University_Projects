@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Favourite pictures
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+
+      <ul *ngFor="let record of historyArray; let i = index">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-self-end">
+              <img src="{{record.selectedPicture.src.medium}}" alt="" class="ion-align-self-end">
+            </ion-col>
+
+            <ion-col size="auto">
+              <ion-button (click)="btnRemovePicture(record)" expand="block">
+                <ion-icon name="remove-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-button (click)="btnRouteToInfo(record.selectedPicture)" routerLink="../../tab3" expand="block">
+                <ion-icon name="information-circle"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ul>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

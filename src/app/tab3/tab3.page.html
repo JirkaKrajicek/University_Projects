@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Picture Detail
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="pictureDetail != null">
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <ion-col class="ion-align-self-end">
+          <img src="{{pictureDetail.src.medium}}" alt="" class="ion-align-self-end">
+          <b>ID: </b>
+          <p>{{pictureDetail.id}}</p><br>
+          <b>Resolution: </b>
+          <p>{{pictureDetail.width}}x{{pictureDetail.height}}px</p><br>
+          <b>Author: </b>
+          <p>{{pictureDetail.photographer}}</p><br>
+          <b>Author link: </b><a href="{{pictureDetail.photographer_url}}">{{pictureDetail.photographer_url}}</a><br>
+          <b>Picture url: </b><a href="{{pictureDetail.url}}">{{pictureDetail.url}}</a><br>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!moreFromBaseWord">
+    <button class="centerDir" style="background-color: transparent; color:white; font-size: 35px;"
+      (click)="showMorePick(pictureDetail.baseWord)">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </button>
+  </div>
+
+
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <div *ngIf="moreFromBaseWord">
+        <ul *ngFor="let d of morePics">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="ion-align-self-end">
+                <img src="{{d.src.medium}}" alt="" class="ion-align-self-end">
+              </ion-col>
+
+              <ion-col size="auto">
+                <ion-button (click)="btnSaveFavouriteClicked(d)" expand="block">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

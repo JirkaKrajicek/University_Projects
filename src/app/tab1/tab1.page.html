@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Okno do Světa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <!-- Input with placeholder -->
+      <ion-input [(ngModel)]="myinput" placeholder="Search from Pexels... "></ion-input>
+      <ion-button (click)="btnSearchClicked()" expand="block">
+        <ion-icon name="search-outline"></ion-icon>Search
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="welcome-card">
+    <ion-card-content>
+
+      <ul *ngFor="let d of outputData">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-self-end">
+              <img src="{{d.src.medium}}" alt="" class="ion-align-self-end">
+            </ion-col>
+
+            <ion-col size="auto">
+              <ion-button (click)="btnSaveFavouriteClicked(d)" expand="block">
+                <ion-icon name="heart-outline"></ion-icon>
+              </ion-button>
+
+              <ion-button (click)="btnRouteToInfo(d)" routerLink="../../tab3" expand="block">
+                <ion-icon name="information-circle"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ul>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
